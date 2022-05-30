@@ -1,0 +1,6 @@
+s3_bucket: 'made-ml-in-prod'
+path_to_model: 'logreg.pkl'
+path_to_transformer: 'transformer_logreg.pkl'
+path_to_data: 'heart_for_predict.csv'
+path_to_target: 'predictions.csv'
+path_to_predict_config: 'predict_config_logreg.yaml'
