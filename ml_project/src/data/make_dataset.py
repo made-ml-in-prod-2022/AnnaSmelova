@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Subpackage for load data"""
 import logging
-from typing import Tuple
+from typing import Tuple, Optional
 import sys
 
 import pandas as pd
@@ -23,7 +23,7 @@ def read_raw_data(path: str) -> pd.DataFrame:
     return df
 
 
-def prepare_data(df: pd.DataFrame, params) -> Tuple[pd.DataFrame, pd.Series]:
+def prepare_data(df: pd.DataFrame, params) -> Tuple[pd.DataFrame, Optional[pd.Series]]:
     """Prepare data"""
     logger.info('Preparing dataset...')
     logger.info('Outliers handling...')
