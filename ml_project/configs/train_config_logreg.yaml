@@ -1,0 +1,35 @@
+input_data_path: "data/raw/heart.csv"
+metric_path: "models/metrics_train_logreg.json"
+save_model: "models/logreg.pkl"
+save_transformer: "models/transformer_logreg.pkl"
+
+train_params:
+  model_type: "LogisticRegression"
+
+prepare_params:
+  outliers_field: "RestingBP"
+  nulls_field: "Cholesterol"
+  target_field: "HeartDisease"
+
+custom_transformer_params:
+  use_custom_transformer: false
+
+feature_params:
+  cat_features:
+    - "Sex"
+    - "ChestPainType"
+    - "RestingECG"
+    - "ExerciseAngina"
+    - "ST_Slope"
+  num_features:
+    - "Age"
+    - "RestingBP"
+    - "Cholesterol"
+    - "FastingBS"
+    - "MaxHR"
+    - "Oldpeak"
+  target: "HeartDisease"
+
+splitting_params:
+  test_size: 0.3
+  random_state: 0

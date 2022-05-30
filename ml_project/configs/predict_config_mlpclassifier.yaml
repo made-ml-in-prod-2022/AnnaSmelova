@@ -1,0 +1,9 @@
+input_data_path: "data/raw/heart_for_predict.csv"
+model_path: "models/mlpclassifier.pkl"
+predict_path: "data/predicted/predict_mlpclassifier.csv"
+transformer_path: "models/transformer_mlpclassifier.pkl"
+target_col: "HeartDisease"
+prepare_params:
+  outliers_field: "RestingBP"
+  nulls_field: "Cholesterol"
+  target_field: "HeartDisease"

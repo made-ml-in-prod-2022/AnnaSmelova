@@ -1,0 +1,9 @@
+input_data_path: "data/raw/heart_for_predict.csv"
+model_path: "models/logreg.pkl"
+predict_path: "data/predicted/predict_logreg.csv"
+transformer_path: "models/transformer_logreg.pkl"
+target_col: "HeartDisease"
+prepare_params:
+  outliers_field: "RestingBP"
+  nulls_field: "Cholesterol"
+  target_field: "HeartDisease"
