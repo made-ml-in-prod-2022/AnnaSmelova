@@ -37,6 +37,3 @@ jobs:
       run: |
         cd ml_project
         python -m pytest tests
-        cd ..
-        cd online_inference
-        python -m pytest tests/tests.py
