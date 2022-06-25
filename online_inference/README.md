@@ -19,6 +19,10 @@ heart.csv
     
     docker run -p 8000:8000 annasmelova/online_inference:v1
 
+### Запрос к сервису(из директории online_inference):
+
+    python make_request.py
+
 ### Запуск тестов:
 
     python -m pytest tests/tests.py
