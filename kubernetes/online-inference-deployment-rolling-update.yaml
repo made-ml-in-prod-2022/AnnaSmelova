@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: online-inference-rolling-update
+  labels:
+    app: online-inference
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: online-inference
+  template:
+    metadata:
+      name: online-inference-rolling-update
+      labels:
+        app: online-inference
+    spec:
+      containers:
+        - image: annasmelova/online_inference:v1
+          name: online-inference
+          ports:
+            - containerPort: 8000
